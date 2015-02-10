@@ -1,0 +1,45 @@
+{
+	"application": {
+		"title": "MDed",
+		"theme": "bootswatch-darkly",
+
+		"footer_text": "MDed - Markdown Editor. Built in few minutes with <a href=\"http://www.meteorkitchen.com\" target=\"_blank\">Meteor Kitchen</a> - Code generator for Meteor.js",
+
+		"free_zone": {
+			"container_class": "container-fluid",
+			"pages": [
+				{
+					"name": "home",
+
+					"components": [
+
+						{
+							"name": "mded",
+							"type": "custom",
+							"custom_template": "files/mded"
+						}
+
+					]
+				}
+			],
+
+			"menus": [
+				{
+					"name": "main_menu",
+					"class": "nav navbar-nav",
+					"items": [
+						{ "title": "Home", "route": "home", "icon_class": "fa fa-home" }
+					]
+				}
+			]
+		},
+
+		"packages": {
+			"meteor": ["perak:codemirror", "perak:markdown"]
+		},
+
+		"copy_files": [
+			{ "source": "files/styles.less", "dest": "CLIENT_STYLES_DIR/styles.less" }
+		]
+	}
+}
